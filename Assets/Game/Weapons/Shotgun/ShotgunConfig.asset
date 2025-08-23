@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509ea520896a47c98a2435b1f6a4032f, type: 3}
+  m_Name: ShotgunConfig
+  m_EditorClassIdentifier: 
+  _weaponPrefab: {fileID: 670925513639750171, guid: e853fb84142feec46ad0f7610e25b87e, type: 3}
+  _projectilePrefab: {fileID: 1164099565549185672, guid: a40dcb0f01bb1c6408543d01683612a2, type: 3}
+  _reloadDelay: 1
+  _numberOfBullets: 3
+  _spreadMaxAngLe: 15
