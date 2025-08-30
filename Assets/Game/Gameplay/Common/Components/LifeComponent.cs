@@ -1,0 +1,27 @@
+﻿using System;
+using UnityEngine;
+
+namespace Game.Gameplay
+{
+	public sealed class LifeComponent : MonoBehaviour
+	{
+		public event Action<int> OnHealthChanged;
+		public int Health
+		{
+			get => _currentHealth;
+			set => _currentHealth = value;
+		}
+		public int MaxHealth => _maxHealth;
+
+		[SerializeField]
+		private int _maxHealth = 5;
+		[SerializeField]
+		private int _currentHealth = 5;
+
+		public void TakeDamage(int delta)
+		{
+			_currentHealth = Mathf.Max(0, _currentHealth - delta);
+			OnHealthChanged?.Invoke(_currentHealth);
+		}
+	}
+}
