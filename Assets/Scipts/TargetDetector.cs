@@ -4,44 +4,38 @@ using UnityEngine;
 public class TargetDetector : MonoBehaviour
 {
 	[SerializeField]
-	private float range = 10f;
+	private float detectRange = 50f;
 
-	/// <summary>
-	/// Возвращает Transform ближайшей цели (юнит или база) в указанном направлении.
-	/// </summary>
-	public Transform FindTarget(Vector2 direction, TeamType myTeam, float range)
+	public Transform FindTarget(Vector2 direction, TeamType myTeam)
 	{
 		RaycastHit2D[] hits = Physics2D.RaycastAll(
 			transform.position,
 			direction,
-			range
+			detectRange
 			);
 
 		Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
 
 		foreach (var hit in hits)
 		{
-			if (hit.collider == null) continue;
-
-			// Проверка юнита
-			var targetUnit = hit.collider.GetComponent<UnitItem>();
-			if (targetUnit != null)
+			if (hit.collider == null)
 			{
-				if (targetUnit.teamType != myTeam)
-				{
-					return targetUnit.transform; // враг
-				}
-				else
-				{
-					continue; // свой, пропускаем
-				}
+				continue;
 			}
 
-			// Проверка базы
-			var building = hit.collider.GetComponent<BuildingItem>();
-			if (building != null)
+			if (hit.collider.TryGetComponent(out UnitItem targetUnit))
 			{
-				if (myTeam == TeamType.Enemy) // только враги могут стрелять в базу
+				if (IsEnemy(myTeam, targetUnit))
+				{
+					return targetUnit.transform;
+				}
+
+				continue;
+			}
+
+			if (hit.collider.TryGetComponent(out BuildingItem building))
+			{
+				if (myTeam == TeamType.Enemy)
 				{
 					return building.transform;
 				}
@@ -51,8 +45,13 @@ public class TargetDetector : MonoBehaviour
 		return null;
 	}
 
+	private static bool IsEnemy(TeamType myTeam, UnitItem targetUnit)
+	{
+		return targetUnit.teamType != myTeam;
+	}
+
 	private void OnDrawGizmos()
 	{
-		Gizmos.DrawLine(transform.position, transform.position + transform.right * range);
+		Gizmos.DrawLine(transform.position, transform.position + transform.right * detectRange);
 	}
 }

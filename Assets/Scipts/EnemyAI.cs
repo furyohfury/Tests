@@ -23,23 +23,28 @@ public class EnemyAI : MonoBehaviour
 
 	private void Update()
 	{
-		currentTarget = detector.FindTarget(unit.transform.right, unit.teamType, unitConfig.range);
+		currentTarget = detector.FindTarget(unit.transform.right, unit.teamType);
 
 		if (currentTarget != null)
 		{
 			float distance = Vector2.Distance(transform.position, currentTarget.position);
 
 			if (distance > unitConfig.stopDistance)
-				unit.moveDirection = unit.transform.right; // двигаемся к базе или врагу
+			{
+				unit.moveDirection = unit.transform.right;
+			}
 			else
-				unit.moveDirection = Vector2.zero; // остановились
+			{
+				unit.moveDirection = Vector2.zero;
+			}
 
 			if (distance <= unitConfig.range)
+			{
 				unit.Shoot();
+			}
 		}
 		else
 		{
-			// если никого не видим — идем в сторону базы
 			unit.moveDirection = unit.transform.right;
 		}
 	}

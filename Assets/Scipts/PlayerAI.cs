@@ -14,7 +14,7 @@ public class PlayerAi : MonoBehaviour
 		unit = GetComponent<UnitItem>();
 		detector = GetComponent<TargetDetector>();
 		unit.teamType = TeamType.Player;
-		unit.moveDirection = Vector2.zero; // игроки стоят на месте
+		unit.moveDirection = Vector2.zero;
 	}
 
 	public void Init(UnitConfig config)
@@ -24,13 +24,15 @@ public class PlayerAi : MonoBehaviour
 
 	private void Update()
 	{
-		currentTarget = detector.FindTarget(unit.transform.right, unit.teamType, unitConfig.range);
+		currentTarget = detector.FindTarget(unit.transform.right, unit.teamType);
 
 		if (currentTarget != null)
 		{
 			float distance = Vector2.Distance(transform.position, currentTarget.position);
 			if (distance <= unitConfig.range)
+			{
 				unit.Shoot();
+			}
 		}
 	}
 }
