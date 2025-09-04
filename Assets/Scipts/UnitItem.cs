@@ -80,7 +80,7 @@ public class UnitItem : MonoBehaviour
 	private void OnDie()
 	{
 		Debug.Log($"Unit {gameObject.name} died");
-		unitAudioSource.PlayOneShot(unitConfig.soundDeath);
+		AudioSource.PlayClipAtPoint(unitConfig.soundDeath, transform.position);
 		Destroy(gameObject);
 	}
 
