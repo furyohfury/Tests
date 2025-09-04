@@ -11,13 +11,13 @@ public class UnitConfig : ScriptableObject
     public AudioClip soundDeath;
     public AudioClip soundSpawn;
 
-    public float damage;
+    public int damage;
     public int hp;
     public float moveSpeed;
     public float stopDistance;
     public float range;
 
-    public float ammoCount;
+    public int ammoCount;
     public float rateFire;
     public float reload;
     
