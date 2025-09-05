@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      low_poly_interior_128_0: -3454800503124782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

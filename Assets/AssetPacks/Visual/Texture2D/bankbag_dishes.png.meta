@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bankbag_dishes_0: -6889687977095661967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

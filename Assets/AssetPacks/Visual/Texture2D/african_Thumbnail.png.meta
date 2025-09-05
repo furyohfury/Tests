@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      african_Thumbnail_0: -93474160024885652
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

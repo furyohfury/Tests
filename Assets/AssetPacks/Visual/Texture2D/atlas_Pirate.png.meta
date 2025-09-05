@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      atlas_Pirate_0: -8415969907166998045
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

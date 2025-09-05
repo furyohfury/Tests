@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Geisha_Thumbnail_0: 1708056932781546784
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

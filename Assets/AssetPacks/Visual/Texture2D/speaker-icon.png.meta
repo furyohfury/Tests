@@ -211,7 +211,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      speaker-icon_0: -3070307628225800008
+      speaker-icon_1: 7996915706798982560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

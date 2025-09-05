@@ -486,7 +486,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stain_0: -257361123025924044
+      Stain_1: -4801209529755920776
+      Stain_10: -6481369496548474728
+      Stain_11: 8655426818541847243
+      Stain_12: 7428849564077866984
+      Stain_2: 4560496684328061654
+      Stain_3: -8535830175160801077
+      Stain_4: -6501947829649685690
+      Stain_5: 1627263688517200180
+      Stain_6: 7544726803427696527
+      Stain_7: -9152518969955716276
+      Stain_8: -4945303456989547257
+      Stain_9: -4848450485041137228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

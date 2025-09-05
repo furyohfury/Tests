@@ -236,7 +236,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CrossPromotImagesAtlas_0: 2680149393414427348
+      CrossPromotImagesAtlas_1: -6746036525534045141
+      CrossPromotImagesAtlas_2: 3974165446451398884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      couronne_laurier_0: 2083315154752492356
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

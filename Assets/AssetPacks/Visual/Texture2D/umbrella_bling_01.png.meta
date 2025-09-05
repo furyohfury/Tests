@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      umbrella_bling_01_0: -7021138982882144393
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

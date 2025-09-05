@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      umbrella_poor_01_0: 7694046171939547708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fading_circle_0: -4522119399117334590
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

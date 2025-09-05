@@ -711,7 +711,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PrivacySpriteAtlas_0: -5783870405321322950
+      PrivacySpriteAtlas_1: -4700267364975067377
+      PrivacySpriteAtlas_10: -2697236853804420438
+      PrivacySpriteAtlas_11: -3119800941624182866
+      PrivacySpriteAtlas_12: 6262176433288757185
+      PrivacySpriteAtlas_13: 7013308770845117386
+      PrivacySpriteAtlas_14: 1519202351987863586
+      PrivacySpriteAtlas_15: 6711790977208950160
+      PrivacySpriteAtlas_16: 1914747116236513918
+      PrivacySpriteAtlas_17: 8767291750201516216
+      PrivacySpriteAtlas_18: -6350615149393298711
+      PrivacySpriteAtlas_19: -359101578220323919
+      PrivacySpriteAtlas_2: -2461234698512285360
+      PrivacySpriteAtlas_20: 1027006284034918637
+      PrivacySpriteAtlas_21: 3649111834499866393
+      PrivacySpriteAtlas_3: -3670304540016111514
+      PrivacySpriteAtlas_4: 3940384685260487506
+      PrivacySpriteAtlas_5: 8515838026061046465
+      PrivacySpriteAtlas_6: -2022612872219216736
+      PrivacySpriteAtlas_7: 3029524867642929143
+      PrivacySpriteAtlas_8: -15015743382628308
+      PrivacySpriteAtlas_9: -6694006497491128214
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

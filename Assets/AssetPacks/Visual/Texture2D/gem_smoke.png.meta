@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gem_smoke_0: 1155060653771656953
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -511,7 +511,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      house_select_border_0: 5377213088176692264
+      house_select_border_1: -5903604104282508716
+      house_select_border_10: -6971948128421948912
+      house_select_border_11: 5805731775554011483
+      house_select_border_12: 2362931819726391080
+      house_select_border_13: -6205864319398791369
+      house_select_border_2: 6326203777016615218
+      house_select_border_3: 6928227009320485617
+      house_select_border_4: -2075692612664624380
+      house_select_border_5: 1440289368651285062
+      house_select_border_6: -3497829376306319665
+      house_select_border_7: 2361066979179860681
+      house_select_border_8: -3566097047857269910
+      house_select_border_9: 4383653936280532578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

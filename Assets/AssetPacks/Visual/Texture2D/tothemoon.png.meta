@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tothemoon_0: -1463058757207735163
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

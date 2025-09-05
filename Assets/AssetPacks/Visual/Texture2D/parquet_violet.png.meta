@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      parquet_violet_0: -6862120939120945914
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

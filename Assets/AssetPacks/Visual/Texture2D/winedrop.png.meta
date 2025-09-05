@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      winedrop_0: 9102238391530192711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1486,7 +1486,60 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DebugScreenCommonImageAtlas2_0: -8287118338021252619
+      DebugScreenCommonImageAtlas2_1: 4055049271564384429
+      DebugScreenCommonImageAtlas2_10: -5114469296463664821
+      DebugScreenCommonImageAtlas2_11: -872483293273147025
+      DebugScreenCommonImageAtlas2_12: 6058076383512214265
+      DebugScreenCommonImageAtlas2_13: 5531379491734258586
+      DebugScreenCommonImageAtlas2_14: -6405494893350468407
+      DebugScreenCommonImageAtlas2_15: 192162013719883930
+      DebugScreenCommonImageAtlas2_16: 9076640422282498060
+      DebugScreenCommonImageAtlas2_17: -5014998834740657616
+      DebugScreenCommonImageAtlas2_18: 48110294715080773
+      DebugScreenCommonImageAtlas2_19: -1209554790323618615
+      DebugScreenCommonImageAtlas2_2: 5834680938669816011
+      DebugScreenCommonImageAtlas2_20: 8757503193287265556
+      DebugScreenCommonImageAtlas2_21: 4423508574607113506
+      DebugScreenCommonImageAtlas2_22: 7914164188918729360
+      DebugScreenCommonImageAtlas2_23: 8042769397914281558
+      DebugScreenCommonImageAtlas2_24: -3248961416505492065
+      DebugScreenCommonImageAtlas2_25: -5003321553639987807
+      DebugScreenCommonImageAtlas2_26: -1058450806423719122
+      DebugScreenCommonImageAtlas2_27: -7042244935241724254
+      DebugScreenCommonImageAtlas2_28: -6695120856057423478
+      DebugScreenCommonImageAtlas2_29: 8816984673206199641
+      DebugScreenCommonImageAtlas2_3: -2801192450899403353
+      DebugScreenCommonImageAtlas2_30: 5421835966490596398
+      DebugScreenCommonImageAtlas2_31: 7784395858139306531
+      DebugScreenCommonImageAtlas2_32: 4295469355580433032
+      DebugScreenCommonImageAtlas2_33: -2885494143302824011
+      DebugScreenCommonImageAtlas2_34: 208651221382095339
+      DebugScreenCommonImageAtlas2_35: 5347531851451233101
+      DebugScreenCommonImageAtlas2_36: -4014353461149662474
+      DebugScreenCommonImageAtlas2_37: 5074727338541594429
+      DebugScreenCommonImageAtlas2_38: -7768087914238775711
+      DebugScreenCommonImageAtlas2_39: -5345569288939173867
+      DebugScreenCommonImageAtlas2_4: 6116187201018355159
+      DebugScreenCommonImageAtlas2_40: -2635770736801014864
+      DebugScreenCommonImageAtlas2_41: 7012358644180791179
+      DebugScreenCommonImageAtlas2_42: 5979906403374548199
+      DebugScreenCommonImageAtlas2_43: -2228348072089374256
+      DebugScreenCommonImageAtlas2_44: 6844096984999562515
+      DebugScreenCommonImageAtlas2_45: -2416501276149010074
+      DebugScreenCommonImageAtlas2_46: 4105704747464901287
+      DebugScreenCommonImageAtlas2_47: -4910282734894670347
+      DebugScreenCommonImageAtlas2_48: 5509352155360995663
+      DebugScreenCommonImageAtlas2_49: -3755268877105667512
+      DebugScreenCommonImageAtlas2_5: -583291349255742676
+      DebugScreenCommonImageAtlas2_50: -378911334552806585
+      DebugScreenCommonImageAtlas2_51: 6592796766535478954
+      DebugScreenCommonImageAtlas2_52: -4891322658667551173
+      DebugScreenCommonImageAtlas2_6: 9088521041817374848
+      DebugScreenCommonImageAtlas2_7: 2394949616483671509
+      DebugScreenCommonImageAtlas2_8: 8335385091038871712
+      DebugScreenCommonImageAtlas2_9: -4832268560421544043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Aladdin_Thumbnail_0: 5077901192185000270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

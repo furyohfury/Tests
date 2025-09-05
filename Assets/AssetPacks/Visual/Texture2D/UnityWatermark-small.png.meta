@@ -361,7 +361,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UnityWatermark-small_0: -800668043300522475
+      UnityWatermark-small_1: -4214410517361245136
+      UnityWatermark-small_2: -5355599494368408897
+      UnityWatermark-small_3: 822353272761664900
+      UnityWatermark-small_4: -847960061414805084
+      UnityWatermark-small_5: 1976714577387780818
+      UnityWatermark-small_6: 4638224734235248147
+      UnityWatermark-small_7: -5210818672352815265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

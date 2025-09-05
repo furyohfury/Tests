@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Punk_Thumbnail_0: 6590752730789085860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Banderole_Level 1_0: 115776666440005963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

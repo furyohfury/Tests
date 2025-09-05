@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlackWoman_Thumbnail_0: -4996992863740777618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

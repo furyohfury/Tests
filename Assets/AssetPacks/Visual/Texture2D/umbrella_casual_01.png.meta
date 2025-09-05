@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      umbrella_casual_01_0: 5334752885405846532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

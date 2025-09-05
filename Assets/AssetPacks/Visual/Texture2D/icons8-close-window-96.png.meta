@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      icons8-close-window-96_0: -4595266886275897153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      halo_splash_0: 8593147727970003742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

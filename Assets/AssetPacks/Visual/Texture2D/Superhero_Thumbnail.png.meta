@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Superhero_Thumbnail_0: -1725686857368730015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
