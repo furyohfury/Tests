@@ -15,8 +15,16 @@ namespace Game.Installers
 			         .To<PlayerDisableLevelFinishable>()
 			         .AsCached();
 
+			Container.Bind<ILevelFinishable>()
+			         .To<PlayerAnimatorLevelFinishable>()
+			         .AsCached();
+
 			Container.Bind<IGameOverHandler>()
 			         .To<DisablePlayerGameOverHandler>()
+			         .AsCached();
+
+			Container.Bind<IGameOverHandler>()
+			         .To<PlayerAnimationGameOverHandler>()
 			         .AsCached();
 
 			Container.BindInterfacesTo<GameOverObserver>()

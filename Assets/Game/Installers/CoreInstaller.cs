@@ -28,6 +28,10 @@ namespace Game.Installers
 			Container.Bind<SwitchModelsThresholdsConfig>()
 			         .FromInstance(_switchModelsThresholdsConfig)
 			         .AsSingle();
+
+			Container.Bind<Camera>()
+			         .FromInstance(Camera.main)
+			         .AsSingle();
 		}
 	}
 }
