@@ -11,7 +11,11 @@ namespace Game.Gameplay.Level
 
 		private void OnTriggerEnter(Collider other)
 		{
-			other.transform.Rotate(_direction);
+			if (other.TryGetComponent(out Player _))
+			{
+				other.transform.Rotate(_direction);
+				enabled = false;
+			}
 		}
 	}
 }
