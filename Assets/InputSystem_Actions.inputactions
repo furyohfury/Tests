@@ -497,7 +497,7 @@
                     "path": "<Touchscreen>/primaryTouch/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Touch",
                     "action": "Swipe",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -505,10 +505,10 @@
                 {
                     "name": "",
                     "id": "8fbf2fdc-b2e3-47ab-9a1f-6b4b9f935b40",
-                    "path": "<Mouse>/position",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Swipe",
                     "isComposite": false,
                     "isPartOfComposite": false

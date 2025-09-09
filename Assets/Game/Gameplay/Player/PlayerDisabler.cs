@@ -11,18 +11,18 @@
 
 		public void Enable()
 		{
-			var autoMoveComponent = _playerService.Player.GetComponent<AutoMoveComponent>();
-			var sideMoveController = _playerService.Player.GetComponent<RunnerSwipeController>();
-			autoMoveComponent.enabled = true;
+			var sideMoveController = _playerService.Player.GetComponent<PlayerMoveController>();
 			sideMoveController.enabled = true;
+			var moveComponent = _playerService.Player.GetComponent<MoveComponent>();
+			moveComponent.enabled = true;
 		}
 
 		public void Disable()
 		{
-			var autoMoveComponent = _playerService.Player.GetComponent<AutoMoveComponent>();
-			var sideMoveController = _playerService.Player.GetComponent<RunnerSwipeController>();
-			autoMoveComponent.enabled = false;
+			var sideMoveController = _playerService.Player.GetComponent<PlayerMoveController>();
 			sideMoveController.enabled = false;
+			var moveComponent = _playerService.Player.GetComponent<MoveComponent>();
+			moveComponent.enabled = false;
 		}
 	}
 }
