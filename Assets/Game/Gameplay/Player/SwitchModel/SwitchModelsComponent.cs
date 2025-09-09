@@ -8,27 +8,30 @@ namespace Game.Gameplay
 	public sealed class SwitchModelsComponent : MonoBehaviour
 	{
 		public IReadOnlyList<ModelVariant> Variants => _variants;
+		public ModelVariant ActiveVariant => _activeVariant;
 
 		[SerializeField]
 		private ModelVariant[] _variants;
-		private ModelVariant _initialModel;
+		private ModelVariant _activeVariant;
 
 		private void Awake()
 		{
-			_initialModel = Variants.Single(variant => variant.gameObject.activeSelf);
+			_activeVariant = Variants.Single(variant => variant.gameObject.activeSelf);
 		}
 
 		[Button]
 		public void SetModel(ModelVariant variant)
 		{
-			if (variant == _initialModel)
+			if (variant == ActiveVariant)
 			{
 				return;
 			}
-			
-			_initialModel.SetActive(false);
+
+			var animatorState = ActiveVariant.GetAnimatorStateSnapshot();
+			ActiveVariant.SetActive(false);
 			variant.SetActive(true);
-			_initialModel = variant;
+			variant.SyncAnimator(animatorState);
+			_activeVariant = variant;
 		}
 	}
 }

@@ -13,12 +13,18 @@ MonoBehaviour:
   m_Name: SwitchModelsThresholdsConfig
   m_EditorClassIdentifier: 
   _tiers:
-  - Id: Poor
+  - Id: Hobo
     MinMoney: 1
-    VariantId: poor
-  - Id: Middle
-    MinMoney: 8
-    VariantId: middle
-  - Id: Cocktail
+    VariantId: Hobo
+  - Id: Poor
+    MinMoney: 5
+    VariantId: Poor
+  - Id: Casual
+    MinMoney: 10
+    VariantId: Casual
+  - Id: Flexer
     MinMoney: 15
-    VariantId: cocktail
+    VariantId: Flexer
+  - Id: Superhero
+    MinMoney: 20
+    VariantId: Superhero
