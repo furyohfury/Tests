@@ -1,4 +1,4 @@
-﻿Shader "BaseShader"
+﻿Shader "ZTest"
 {
     Properties
     {
@@ -17,6 +17,9 @@
         }
         Pass
         {
+            ZTest LEqual
+            ZTest On
+            
             Tags
             {
                 "LightMode" = "UniversalForward"

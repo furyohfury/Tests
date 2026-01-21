@@ -1,18 +1,16 @@
-﻿Shader "BaseShader"
+﻿Shader "Silhouette"
 {
     Properties
     {
-        _BaseColor ("Base Color", Color) = (1,
-        1, 1, 1)
-        _BaseTex("Base Texture", 2D) = "white"
-        {}
+        _ForegroundColor ("FG Color", Color) = (0, 0, 0, 1)
+        _BackgroundColor ("BG Color", Color) = (1, 1, 1, 1)
     }
     SubShader
     {
         Tags
         {
-            "RenderType" = "Opaque"
-            "Queue" = "Geometry"
+            "RenderType" = "Transparent"
+            "Queue" = "Transparent"
             "RenderPipeline" = "UniversalPipeline"
         }
         Pass
@@ -21,42 +19,41 @@
             {
                 "LightMode" = "UniversalForward"
             }
-            
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
             
             struct appdata
             {
                 float4 positionOS : Position;
-                float2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
-                float4 positionCS : SV_Position;
-                float2 uv : TEXCOORD0;
+                float4 positionCS : SV_POSITION;
+                float4 positionSS : TEXCOORD0;
             };
             
             CBUFFER_START(UnityPerMaterial)
-            float4 _BaseTex_ST;
-            float4 _BaseColor;
+            float4 _ForegroundColor;
+            float4 _BackgroundColor;
             CBUFFER_END
-            sampler2D _BaseTex;
 
             v2f vert(appdata v)
             {
                 v2f o;
                 o.positionCS = TransformObjectToHClip(v.positionOS);
-                o.uv = TRANSFORM_TEX(v.uv, _BaseTex);
+                o.positionSS = ComputeScreenPos(o.positionCS);
                 return o;
             }
 
             float4 frag(v2f i) : SV_Target
             {
-                float4 textureSample = tex2D(_BaseTex, i.uv);
-                return textureSample * _BaseColor;
+                float2 screenUVs = i.positionSS.xy / i.positionSS.w;
+                float rawDepth = tex2D(_CameraDepthTexture,
+                screenUVs).r;
             }
             ENDHLSL
         }

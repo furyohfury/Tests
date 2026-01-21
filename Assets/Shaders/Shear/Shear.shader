@@ -1,4 +1,4 @@
-﻿Shader "BaseShader"
+﻿Shader "Shear"
 {
     Properties
     {
@@ -6,6 +6,9 @@
         1, 1, 1)
         _BaseTex("Base Texture", 2D) = "white"
         {}
+        _Shear("Shear Amount", Vector) = (0, 0, 0,
+0)
+
     }
     SubShader
     {
@@ -42,6 +45,7 @@
             CBUFFER_START(UnityPerMaterial)
             float4 _BaseTex_ST;
             float4 _BaseColor;
+            float2 _Shear;
             CBUFFER_END
             sampler2D _BaseTex;
 
@@ -49,7 +53,13 @@
             {
                 v2f o;
                 o.positionCS = TransformObjectToHClip(v.positionOS);
-                o.uv = TRANSFORM_TEX(v.uv, _BaseTex);
+                float2x2 shearMatrix = float2x2
+(
+1, -_Shear.x,
+-_Shear.y, 1
+);
+                o.uv = TRANSFORM_TEX(v.positionOS ,_BaseTex);
+                o.uv = mul(o.uv, shearMatrix);
                 return o;
             }
 

@@ -1,11 +1,12 @@
-﻿Shader "BaseShader"
+﻿Shader "ParticleFlipbook"
 {
     Properties
     {
         _BaseColor ("Base Color", Color) = (1,
         1, 1, 1)
-        _BaseTex("Base Texture", 2D) = "white"
+        _BaseTex("Base Texture", 3D) = "white"
         {}
+        _Speed("Anim speed", Float) = 1
     }
     SubShader
     {
@@ -42,8 +43,9 @@
             CBUFFER_START(UnityPerMaterial)
             float4 _BaseTex_ST;
             float4 _BaseColor;
+            float _Speed;
             CBUFFER_END
-            sampler2D _BaseTex;
+            sampler3D _BaseTex;
 
             v2f vert(appdata v)
             {
@@ -53,9 +55,10 @@
                 return o;
             }
 
-            float4 frag(v2f i) : SV_Target
+            float4 frag(v2f i) : SV_Target  
             {
-                float4 textureSample = tex2D(_BaseTex, i.uv);
+    float3 animUV = float3(i.uv, fmod(_Time.y * _Speed, 64) / 64);
+                float4 textureSample = tex3D(_BaseTex, animUV);
                 return textureSample * _BaseColor;
             }
             ENDHLSL
