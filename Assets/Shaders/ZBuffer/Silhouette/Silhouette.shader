@@ -13,6 +13,26 @@
             "Queue" = "Transparent"
             "RenderPipeline" = "UniversalPipeline"
         }
+        
+        Pass
+        {
+            Name "DepthOnly"
+            Tags
+            {
+                "LightMode" = "DepthOnly"
+            }
+            ZWrite On
+            ColorMask 0
+            HLSLPROGRAM
+            #pragma vertex DepthOnlyVertex
+            #pragma fragment DepthOnlyFragment
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/UnlitInput.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/DepthOnlyPass.hlsl"
+            #pragma multi_compile_instancing
+            #pragma multi_compile _ DOTS_INSTANCING_ON
+            ENDHLSL
+        }
+        
         Pass
         {
             Tags
@@ -24,7 +44,7 @@
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
-            
+
             struct appdata
             {
                 float4 positionOS : Position;
@@ -35,10 +55,10 @@
                 float4 positionCS : SV_POSITION;
                 float4 positionSS : TEXCOORD0;
             };
-            
+
             CBUFFER_START(UnityPerMaterial)
-            float4 _ForegroundColor;
-            float4 _BackgroundColor;
+                float4 _ForegroundColor;
+                float4 _BackgroundColor;
             CBUFFER_END
 
             v2f vert(appdata v)
@@ -52,10 +72,16 @@
             float4 frag(v2f i) : SV_Target
             {
                 float2 screenUVs = i.positionSS.xy / i.positionSS.w;
-                float rawDepth = tex2D(_CameraDepthTexture,
-                screenUVs).r;
+                float rawDepth = SampleSceneDepth(screenUVs);
+                float linearDepth = Linear01Depth(rawDepth, _ZBufferParams);
+                float4 color = lerp(_ForegroundColor, _BackgroundColor, linearDepth);
+
+                return color;
             }
             ENDHLSL
         }
+
+        
+
     }
 }
