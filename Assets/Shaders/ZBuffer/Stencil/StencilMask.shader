@@ -16,6 +16,7 @@
         {
             ColorMask 0
             ZWrite Off
+//            ZTest LEqual
             
             Stencil
             {
