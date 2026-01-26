@@ -37,7 +37,7 @@ Shader "Examples/FlatShading"
             {
                 float4 positionCS : SV_POSITION;
                 float2 uv : TEXCOORD0;
-                nointerpolation  float4 flatLight : TEXCOORD1;
+                nointerpolation float4 flatLight : TEXCOORD1;
             };
 
             sampler2D _BaseTex;
@@ -53,13 +53,14 @@ Shader "Examples/FlatShading"
                 v2f o;
                 o.positionCS = TransformObjectToHClip(v.positionOS.xyz);
                 o.uv = TRANSFORM_TEX(v.uv, _BaseTex);
-                float3 normalWS = TransformObjectToWorld(v.normalOS);
+                float3 normalWS = TransformObjectToWorldNormal(v.normalOS);
                 float3 ambient = SampleSHVertex(normalWS);
                 Light light = GetMainLight();
                 half3 lightColor = light.color;
                 half3 lightDir = light.direction;
                 float3 diffuse = lightColor * max(0, dot(normalWS, lightDir));
-                o.flatLight = float4(ambient * _AmbientMultiplier + diffuse, 1.0f);
+                o.flatLight = float4((ambient + diffuse), 1.0f);
+                o.flatLight = saturate(o.flatLight);
 
                 return o;
             }
